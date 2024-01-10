@@ -52,37 +52,68 @@
         {{ if .Site.Data.homepage.social.twitter }}
         <li><a href="https://twitter.com/{{ .Site.Data.homepage.social.twitter }}" > <img
                     class="contain" src="https://cdn.svgporn.com/logos/twitter.svg" alt="Twitter" loading="lazy"></a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.linkedin }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.linkedin }}
         <li><a href="https://www.linkedin.com/in/{{ .Site.Data.homepage.social.linkedin }}">
             <img class="contain" src="https://cdn.svgporn.com/logos/linkedin-icon.svg" alt="LinkedIn" loading="lazy"> </a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.bitbucket }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.bitbucket }}
         <li><a href="https://bitbucket.org/{{ .Site.Data.homepage.social.bitbucket }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/bitbucket.svg" alt="Bitbucket" loading="lazy"> </a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.github }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.github }}
         <li><a href="https://github.com/{{ .Site.Data.homepage.social.github }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/github-icon.svg" alt="GitHub" loading="lazy"> </a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.gitlab }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.gitlab }}
         <li><a href="https://gitlab.com/{{ .Site.Data.homepage.social.gitlab }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/gitlab.svg" alt="GitLab" loading="lazy"></a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.facebook }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.facebook }}
         <li><a href="https://www.facebook.com/{{ .Site.Data.homepage.social.facebook }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/facebook.svg" alt="Facebook" loading="lazy"></a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.instagram }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.instagram }}
         <li><a href="https://instagram.com/{{ .Site.Data.homepage.social.instagram }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/instagram-icon.svg" alt="Instagram" loading="lazy"></a></li>
-        {{ end }}{{ if .Site.Data.homepage.social.gmail }}
+        {{ end }}
+        
+        {{ if .Site.Data.homepage.social.gmail }}
         <li><a href="mailto:{{ .Site.Data.homepage.social.gmail }}@gmail.com" > <img
                     class="contain" src="https://cdn.svgporn.com/logos/google-gmail.svg" alt="Gmail" loading="lazy"></a></li>
-        {{ end }}{{ if .Site.Data.homepage.social.hotmail }}
+        {{ end }}
+        
+        {{ if .Site.Data.homepage.social.hotmail }}
         <li><a href="mailto:{{ .Site.Data.homepage.social.hotmail }}@hotmail.com" > <img
                     class="contain" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoutlook.svg" alt="Hotmail" loading="lazy"></a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.telegram }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.telegram }}
         <li><a href="https://t.me/{{ .Site.Data.homepage.social.telegram }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/telegram.svg" alt="Telegram" loading="lazy"></a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.whatsapp }}
+        {{ end }} 
+        
+        {{ if .Site.Data.homepage.social.whatsapp }}
         <li><a href="https://wa.me/{{ .Site.Data.homepage.social.whatsapp}}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/whatsapp.svg" alt="Whatsapp" loading="lazy"></a></li>
         {{ end }}
+
+        {{ if .Site.Data.homepage.social.leetcode }}
+        <li><a href="https://leetcode.com/{{ .Site.Data.homepage.social.leetcode}}"> <img
+                    class="contain" src="https://res.cloudinary.com/dvc2smeyb/image/upload/v1704906854/leetcode_nje9yx.png" alt="leetcode" loading="lazy"></a></li>
+        {{ end }}
+
+        {{ if .Site.Data.homepage.social.kaggle }}
+        <li><a href="https://www.kaggle.com/{{ .Site.Data.homepage.social.kaggle}}"> <img
+                    class="contain" src="https://res.cloudinary.com/dvc2smeyb/image/upload/v1704906994/Kaggle_logo_yegbdm.png" alt="kaggle" loading="lazy"></a></li>
+        {{ end }}
+        
     </ul>
 
 
@@ -152,6 +183,55 @@
 </section>
 {{ end }}
 
+<!--
+
+  ______                                _
+ |  ____|                              (_)
+ | |__    __  __  _ __     ___   _ __   _    ___   _ __     ___    ___
+ |  __|   \ \/ / | '_ \   / _ \ | '__| | |  / _ \ | '_ \   / __|  / _ \
+ | |____   >  <  | |_) | |  __/ | |    | | |  __/ | | | | | (__  |  __/
+ |______| /_/\_\ | .__/   \___| |_|    |_|  \___| |_| |_|  \___|  \___|
+                 | |
+                 |_|
+
+-->
+
+
+
+
+<!-- experience -->
+{{ if .Site.Data.homepage.experience.enable }}
+
+<section class="uk-margin-large-bottom">
+    <div class="uk-container">
+        <h1 class="uk-heading-line  uk-heading-medium"><span>Experience</span></h1>
+
+        <div class="uk-child-width-1-4@m uk-child-width-1-2  uk-text-center uk-flex-center" uk-grid
+            style="padding-left: 20px; padding-right: 20px">
+
+            {{ range .Site.Data.homepage.experience.item }}
+            <div>
+                <div class="uk-card uk-card-default uk-height-large">
+                    <div class="uk-card-media-top">
+                        <img class="contain experience" src="{{.logo}}" alt="" style="padding: 20px" loading="lazy">
+                    </div>
+                    <div class="uk-card-body" style="padding: initial">
+                        <div style="height: 5em">
+                            <h3 class="uk-card-title uk-heading-small">{{.title}}</h3>
+                        </div>
+                        <p style="height: 4em">{{.company}}</p>
+                        <p>{{.duration}}</p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+</section>
+{{ end }}
+
+<!-- ./experience -->
+
+
 
 <!--
 
@@ -209,53 +289,6 @@
 
 
 
-<!--
-
-  ______                                _
- |  ____|                              (_)
- | |__    __  __  _ __     ___   _ __   _    ___   _ __     ___    ___
- |  __|   \ \/ / | '_ \   / _ \ | '__| | |  / _ \ | '_ \   / __|  / _ \
- | |____   >  <  | |_) | |  __/ | |    | | |  __/ | | | | | (__  |  __/
- |______| /_/\_\ | .__/   \___| |_|    |_|  \___| |_| |_|  \___|  \___|
-                 | |
-                 |_|
-
--->
-
-
-
-
-<!-- experience -->
-{{ if .Site.Data.homepage.experience.enable }}
-
-<section class="uk-margin-large-bottom">
-    <div class="uk-container">
-        <h1 class="uk-heading-line  uk-heading-medium"><span>Experience</span></h1>
-
-        <div class="uk-child-width-1-4@m uk-child-width-1-2  uk-text-center uk-flex-center" uk-grid
-            style="padding-left: 20px; padding-right: 20px">
-
-            {{ range .Site.Data.homepage.experience.item }}
-            <div>
-                <div class="uk-card uk-card-default uk-height-large">
-                    <div class="uk-card-media-top">
-                        <img class="contain experience" src="{{.logo}}" alt="" style="padding: 20px" loading="lazy">
-                    </div>
-                    <div class="uk-card-body" style="padding: initial">
-                        <div style="height: 5em">
-                            <h3 class="uk-card-title uk-heading-small">{{.title}}</h3>
-                        </div>
-                        <p style="height: 4em">{{.company}}</p>
-                        <p>{{.duration}}</p>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-</section>
-{{ end }}
-
-<!-- ./experience -->
 
 
 
@@ -328,18 +361,18 @@
 
 <!-- /Awards -->
 
-<!--Hackathons-->
-{{ if .Site.Data.homepage.hackathons.enable }}
+<!--leadership-->
+{{ if .Site.Data.homepage.leadership.enable }}
 
 <section class="uk-margin-large-bottom">
     <div class="uk-container">
-        <h1 class="uk-heading-line uk-heading-medium "><span>Hackathons</span></h1>
+        <h1 class="uk-heading-line uk-heading-medium "><span>Leadership</span></h1>
     </div>
     <p class="uk-text-center uk-text-lead"><i>Hover over the logos to find out more</i></p>
 </section>
 <div class="uk-container uk-margin-large-bottom uk-text-center">
     <ul id="hexGrid">
-        {{range .Site.Data.homepage.hackathons.item}}
+        {{range .Site.Data.homepage.leadership.item}}
         <li class="hex">
             <div class="hexIn">
                 <div class="hexLink">
@@ -465,3 +498,4 @@
 </section>
 {{ end }}
 {{ end }}
+
