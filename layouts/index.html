@@ -59,50 +59,12 @@
             <img class="contain" src="https://cdn.svgporn.com/logos/linkedin-icon.svg" alt="LinkedIn" loading="lazy"> </a></li>
         {{ end }} 
         
-        {{ if .Site.Data.homepage.social.bitbucket }}
-        <li><a href="https://bitbucket.org/{{ .Site.Data.homepage.social.bitbucket }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/bitbucket.svg" alt="Bitbucket" loading="lazy"> </a></li>
-        {{ end }} 
         
         {{ if .Site.Data.homepage.social.github }}
         <li><a href="https://github.com/{{ .Site.Data.homepage.social.github }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/github-icon.svg" alt="GitHub" loading="lazy"> </a></li>
         {{ end }} 
         
-        {{ if .Site.Data.homepage.social.gitlab }}
-        <li><a href="https://gitlab.com/{{ .Site.Data.homepage.social.gitlab }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/gitlab.svg" alt="GitLab" loading="lazy"></a></li>
-        {{ end }} 
-        
-        {{ if .Site.Data.homepage.social.facebook }}
-        <li><a href="https://www.facebook.com/{{ .Site.Data.homepage.social.facebook }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/facebook.svg" alt="Facebook" loading="lazy"></a></li>
-        {{ end }} 
-        
-        {{ if .Site.Data.homepage.social.instagram }}
-        <li><a href="https://instagram.com/{{ .Site.Data.homepage.social.instagram }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/instagram-icon.svg" alt="Instagram" loading="lazy"></a></li>
-        {{ end }}
-        
-        {{ if .Site.Data.homepage.social.gmail }}
-        <li><a href="mailto:{{ .Site.Data.homepage.social.gmail }}@gmail.com" > <img
-                    class="contain" src="https://cdn.svgporn.com/logos/google-gmail.svg" alt="Gmail" loading="lazy"></a></li>
-        {{ end }}
-        
-        {{ if .Site.Data.homepage.social.hotmail }}
-        <li><a href="mailto:{{ .Site.Data.homepage.social.hotmail }}@hotmail.com" > <img
-                    class="contain" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoutlook.svg" alt="Hotmail" loading="lazy"></a></li>
-        {{ end }} 
-        
-        {{ if .Site.Data.homepage.social.telegram }}
-        <li><a href="https://t.me/{{ .Site.Data.homepage.social.telegram }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/telegram.svg" alt="Telegram" loading="lazy"></a></li>
-        {{ end }} 
-        
-        {{ if .Site.Data.homepage.social.whatsapp }}
-        <li><a href="https://wa.me/{{ .Site.Data.homepage.social.whatsapp}}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/whatsapp.svg" alt="Whatsapp" loading="lazy"></a></li>
-        {{ end }}
 
         {{ if .Site.Data.homepage.social.leetcode }}
         <li><a href="https://leetcode.com/{{ .Site.Data.homepage.social.leetcode}}"> <img
@@ -113,7 +75,12 @@
         <li><a href="https://www.kaggle.com/{{ .Site.Data.homepage.social.kaggle}}"> <img
                     class="contain" src="https://res.cloudinary.com/dvc2smeyb/image/upload/v1704906994/Kaggle_logo_yegbdm.png" alt="kaggle" loading="lazy"></a></li>
         {{ end }}
+
         
+        {{ if .Site.Data.homepage.social.gcp }}
+        <li><a href="https://www.cloudskillsboost.google/public_profiles/{{ .Site.Data.homepage.social.gcp}}"> <img
+                    class="contain" src="https://res.cloudinary.com/dvc2smeyb/image/upload/v1705597928/google_cloud-ar21_r7z9fj.svg" alt="Google Cloud" loading="lazy"></a></li>
+        {{ end }}
     </ul>
 
 
